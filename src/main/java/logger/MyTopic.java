@@ -15,7 +15,7 @@ public class MyTopic implements Subject{
     }
 
     @Override
-    public void register(Observer :) {
+    public void register(Observer obj) {
         if(obj == null) throw new NullPointerException("Null Observer");
         synchronized (MUTEX) {
             if(!observers.contains(obj)) observers.add(obj);
